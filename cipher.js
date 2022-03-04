@@ -8,6 +8,20 @@ funcDecipher = (str, arr) => {
     for(let i = 0; i < splitStr.length; i++){
         for(let j = 0; j < arr.length; j++){
             if(splitStr[i]=== arr[j]){
+                newCiph.push(arr[j+2])
+            }
+        }
+    }
+    let strCiph = newCiph.join('')
+    return strCiph
+    
+}
+funcDecipher = (str, arr) => {
+    let newCiph = []
+    let splitStr = str.split('')
+    for(let i = 0; i < splitStr.length; i++){
+        for(let j = 0; j < arr.length; j++){
+            if(splitStr[i]=== arr[j]){
                 newCiph.push(arr[j-2])
             }
         }
@@ -16,19 +30,5 @@ funcDecipher = (str, arr) => {
     return strCiph
     
 }
-// funcDecipher = (str, arr) => {
-//     let newCiph = []
-//     let splitStr = str.split('')
-//     for(let i = 0; i < splitStr.length; i++){
-//         for(let j = 0; j < arr.length; j++){
-//             if(splitStr[i]=== arr[j]){
-//                 newCiph.push(arr[j-2])
-//             }
-//         }
-//     }
-//     let strCiph = newCiph.join('')
-//     return strCiph
-    
-// }
 console.log(funcDecipher('I love cryptography', alphabet))
-// console.log(funcDecipher('nqxgetrvqitcrj', alphabet))
+console.log(funcDecipher('nqxgetrvqitcrj', alphabet))
